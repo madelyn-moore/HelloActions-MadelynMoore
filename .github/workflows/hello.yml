@@ -16,6 +16,9 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v4
 
+      - name: Compile the C++ program
+        run: g++ hello.cpp -o hello
+
       - name: Run the C++ program
         env:
           WHO_TO_GREET: 'GitHub Actions Student'
