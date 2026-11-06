@@ -1,0 +1,22 @@
+name: Hello World with C++
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  hello-cpp:
+    name: Run the C++ Hello World program
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Run the C++ program
+        env:
+          WHO_TO_GREET: 'GitHub Actions Student'
+        run: ./hello
