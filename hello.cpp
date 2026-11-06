@@ -1,3 +1,4 @@
+// this is main program
 #include <iostream>
 #include <cstdlib>
 
