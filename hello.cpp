@@ -1,4 +1,4 @@
-// this is main program
+// this is main program that i made
 #include <iostream>
 #include <cstdlib>
 
