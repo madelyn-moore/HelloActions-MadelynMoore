@@ -1,14 +1,18 @@
+# Name displayed in Github Actions
 name: Hello World with C++
 
+# events that start the workflow
 on:
   push:
     branches:
       - main
-
+# allow workflow to be started manually
   workflow_dispatch:
 
+# What happens the event happens
 jobs:
   hello-cpp:
+    # program that is ran when something is pushed on main
     name: Run the C++ Hello World program
     runs-on: ubuntu-latest
 
@@ -16,9 +20,11 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v4
 
+    # compiles program to be exeuctable
       - name: Compile the C++ program
         run: g++ hello.cpp -o hello
 
+  # Runs the program
       - name: Run the C++ program
         env:
           WHO_TO_GREET: 'GitHub Actions Student'
